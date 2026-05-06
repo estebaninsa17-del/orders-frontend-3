@@ -10,8 +10,7 @@ registerLicense("Ngo9BigBOggjGyl/VkV+XU9AclREQmBWfFN0Q3NbdVp2fldBcDwsT3RfQFtjTH5
 export default function OrdersPage() {
   const [orders, setOrders] = useState<any[]>([]);
 
-  const load = () => getOrders(1, 100).then((d) => setOrders(d.data || []));
-
+const load = () => getOrders().then((d) => setOrders(d || []));
   useEffect(() => { load(); }, []);
 
   const handleDelete = async (id: number) => {
