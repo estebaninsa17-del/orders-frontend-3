@@ -11,9 +11,9 @@ export default function Dashboard() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    getOrders(1, 100).then((data) => {
-      setOrders(data.data || []);
-      setTotal(data.total || 0);
+  getOrders().then((data) => {
+  setOrders(data || []);
+  setTotal(data.length || 0);
     });
   }, []);
 
