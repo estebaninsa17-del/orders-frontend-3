@@ -3,7 +3,8 @@ const BASE = `${API_URL}/api/v1`
 
 export const getOrders = async () => {
   const res = await fetch(`${BASE}/orders`)
-  return res.json()
+  const json = await res.json()
+  return json.data || []
 }
 
 export async function getOrder(id: number) {

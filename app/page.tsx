@@ -12,10 +12,10 @@ export default function Dashboard() {
 
   useEffect(() => {
   getOrders().then((data) => {
-  setOrders(data || []);
-  setTotal(data.length || 0);
-    });
-  }, []);
+    setOrders(data);
+    setTotal(data.length);
+  });
+}, []);
 
   const totalRevenue = orders.reduce((sum, o) => sum + o.totalAmount, 0);
   const countries = new Set(orders.map((o) => o.customer.country)).size;
