@@ -1,0 +1,3 @@
+app/products/page.tsx(144,16): error TS2304: Cannot find name 'PackageOpen'.
+app/reports/page.tsx(147,117): error TS2353: Object literal may only specify known properties, and 'headerText' does not exist in type 'AxisModel'.
+app/reports/page.tsx(153,20): error TS2304: Cannot find name 'Inject'.
